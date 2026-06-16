@@ -1,0 +1,25 @@
+# requirements.txt
+# Dépendances du projet — régression d'occlusion faciale ViT-B/16 ExPLoRA
+
+# ─── Deep Learning ────────────────────────────────────────────────────────────
+torch>=2.2.0
+torchvision>=0.17.0
+
+# ─── Transformers / HuggingFace ───────────────────────────────────────────────
+transformers>=4.40.0
+
+# ─── Vision & image ───────────────────────────────────────────────────────────
+Pillow>=10.0.0
+opencv-python>=4.9.0
+
+# ─── Data & science ───────────────────────────────────────────────────────────
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+
+# ─── Visualisation ────────────────────────────────────────────────────────────
+matplotlib>=3.8.0
+
+# ─── Utilitaires ──────────────────────────────────────────────────────────────
+tqdm>=4.66.0
+python-dotenv>=1.0.0
