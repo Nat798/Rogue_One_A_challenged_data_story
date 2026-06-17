@@ -88,11 +88,25 @@ Génère 9 figures + un fichier de statistiques dans `TRAIN/analyse_erreurs/`.
 
 ## 6. Inférence finale (TTA + ensemble)
 
+Télécharger le checkpoint final entraîné depuis ce lien :
+
+https://drive.google.com/drive/folders/1lUso8x742knMAz0foizq3NWsotqLJw0z?usp=drive_link
+
+Le placer dans `modele_final/best_model.pth` à la racine du projet :
+
+```
+.
+└── modele_final/
+    └── best_model.pth   ← checkpoint chargé par INFEROTRON_FINAL.py
+```
+
+Puis lancer :
+
 ```bash
 python TRAIN/INFEROTRON_FINAL.py
 ```
 
-Produit `TRAIN/submission_tta.csv`. Pour ensembler plusieurs checkpoints, éditer la liste `CHECKPOINTS` en tête du fichier.
+Produit `TRAIN/submission_tta.csv`. Pour ensembler plusieurs checkpoints, éditer la liste `CHECKPOINTS` en tête du fichier (ajouter d'autres chemins en plus de `CHECKPOINT_FINAL`).
 
 ## Structure du projet
 
@@ -102,5 +116,6 @@ Produit `TRAIN/submission_tta.csv`. Pour ensembler plusieurs checkpoints, édite
 ├── requirements.txt
 ├── DATA/                  ← données téléchargées (voir section 2)
 ├── DATA_GENE/             ← scripts de génération du dataset augmenté
+├── modele_final/          ← best_model.pth utilisé pour l'inférence finale (section 6)
 └── TRAIN/                 ← modèle, entraînement, analyse, inférence
 ```

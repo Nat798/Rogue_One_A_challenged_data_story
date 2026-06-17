@@ -6,7 +6,7 @@ Structure du projet :
   ├── paths.py
   ├── DATA_GENE/          ← step1, step2, step3
   ├── DATA/
-  │   ├── occlusions/     ← train.csv, test_students.csv, data_aug.csv, clean_faces.csv
+  │   ├── occlusion_datasets/  ← train.csv, test_students.csv, data_aug.csv, clean_faces.csv
   │   ├── DATA_AUG/       ← images augmentées générées par step2
   │   ├── crops/
   │   │   └── Crop_224_5fp_100K/   ← images du dataset principal
@@ -16,6 +16,7 @@ Structure du projet :
   │       └── CelebAMask-HQ-attribute-anno.txt
   │   └── coco_object/    ← occludants COCO
   │   └── dtd/            ← occludants DTD
+  ├── modele_final/       ← best_model.pth utilisé pour l'inférence finale
   └── TRAIN/              ← model_dino.py, dataset.py, train.py, run_train.py, ...
 """
 
@@ -71,6 +72,12 @@ CHECKPOINT_PHASE1  = os.path.join(RUNS_DIR, "vitb_explora_aug",  "best_model.pth
 CHECKPOINT_PHASE2  = os.path.join(RUNS_DIR, "vitb_phase2_orig",  "best_model.pth")
 SAVE_DIR_PHASE1    = os.path.join(RUNS_DIR, "vitb_explora_aug")
 SAVE_DIR_PHASE2    = os.path.join(RUNS_DIR, "vitb_phase2_orig")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Modèle final — checkpoint utilisé pour l'inférence (INFEROTRON_FINAL.py)
+# ─────────────────────────────────────────────────────────────────────────────
+MODELE_FINAL_DIR  = os.path.join(ROOT, "modele_final")
+CHECKPOINT_FINAL  = os.path.join(MODELE_FINAL_DIR, "best_model.pth")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Sorties analyse et soumission

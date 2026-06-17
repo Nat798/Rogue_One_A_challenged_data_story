@@ -14,7 +14,7 @@ from PIL import Image
 import torchvision.transforms as T
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from paths import CSV_TEST, IMAGE_DIR, SUBMISSION_CSV, CHECKPOINT_PHASE2
+from paths import CSV_TEST, IMAGE_DIR, SUBMISSION_CSV, CHECKPOINT_FINAL
 
 from model_dino import SegDinoRegressorV2
 
@@ -22,8 +22,8 @@ from model_dino import SegDinoRegressorV2
 # Configuration
 # ─────────────────────────────────────────────────────────────────────────────
 CHECKPOINTS = [
-    CHECKPOINT_PHASE2,
-    # Ajouter d'autres checkpoints pour l'ensemble :
+    CHECKPOINT_FINAL,
+    # Ajouter d'autres checkpoints pour l'ensemble (ex: phase1/phase2) :
     # os.path.join(os.path.dirname(__file__), "runs", "vitb_explora_aug", "best_model.pth"),
 ]
 
