@@ -36,7 +36,7 @@ TRAIN_DIR     = os.path.join(ROOT, "TRAIN")
 # ─────────────────────────────────────────────────────────────────────────────
 # CSVs — tous dans DATA/occlusions/
 # ─────────────────────────────────────────────────────────────────────────────
-OCCLUSIONS_DIR   = os.path.join(DATA_DIR, "occlusions")
+OCCLUSIONS_DIR   = os.path.join(DATA_DIR, "occlusion_datasets")
 CSV_TRAIN        = os.path.join(OCCLUSIONS_DIR, "train.csv")
 CSV_TEST         = os.path.join(OCCLUSIONS_DIR, "test_students.csv")
 CSV_AUG          = os.path.join(OCCLUSIONS_DIR, "data_aug.csv")
