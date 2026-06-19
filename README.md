@@ -90,7 +90,7 @@ Génère 9 figures + un fichier de statistiques dans `TRAIN/analyse_erreurs/`.
 
 Télécharger le checkpoint final entraîné depuis ce lien :
 
-https://drive.google.com/drive/folders/1lUso8x742knMAz0foizq3NWsotqLJw0z?usp=drive_link
+https://drive.google.com/file/d/171vMl4eOC0T8CWWSp2CCAmxrFN7HE8xB/view?usp=drive_link
 
 Le placer dans `modele_final/best_model.pth` à la racine du projet :
 
